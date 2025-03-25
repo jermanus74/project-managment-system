@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useRef } from "react";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import {
   TypedUseSelectorHook,
@@ -10,7 +9,6 @@ import {
 } from "react-redux";
 import globalReducer from "@/state";
 // api calls
-import { api } from "@/state/api";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
 import {
@@ -25,6 +23,8 @@ import {
 } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+import { api } from "@/state/api";
+import { useRef } from "react";
 
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {
