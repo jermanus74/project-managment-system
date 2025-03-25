@@ -1,5 +1,6 @@
 import React from "react";
-import { Search } from "lucide-react"; // Adjust the path based on the actual location of the Search component
+import { Search, Settings } from "lucide-react"; // Adjust the path based on the actual location of the Search component
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -14,6 +15,17 @@ const Navbar = () => {
             placeholder="Search..."
           />
         </div>
+      </div>
+      {/* icons */}
+
+      <div className="flex items-center">
+        <Link
+          href="/settings"
+          className="flex h-min w-min items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
+          <Settings className="h-6 w-6 text-gray-700 dark:text-white" />
+        </Link>
+        <div className="w-[0. mr-5 ml-2 hidden min-h-[2em] w-[0.1rem] bg-gray-200 md:inline-block"></div>
       </div>
     </div>
   );
