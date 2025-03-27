@@ -13,7 +13,11 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
 
   useEffect(() => {
-    if (isDarkMode)
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   });
   return (
     <div className="flex min-h-screen w-full bg-gray-50 text-gray-900">
